@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: FlexMDE17.aux
+The style file: plain.bst
+Database file #1: bibliography.bib
+Repeated entry---line 409 of file bibliography.bib
+ : @inproceedings{AF315
+ :                     ,
+I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in mps
+Warning--to sort, need author or key in soley
+Warning--can't use both author and editor fields in Lara2002
+You've used 21 entries,
+            2118 wiz_defined-function locations,
+            644 strings with 10334 characters,
+and the built_in function-call counts, 8968 in all, are:
+= -- 847
+> -- 484
+< -- 16
++ -- 183
+- -- 161
+* -- 604
+:= -- 1391
+add.period$ -- 69
+call.type$ -- 21
+change.case$ -- 130
+chr.to.int$ -- 0
+cite$ -- 24
+duplicate$ -- 377
+empty$ -- 701
+format.name$ -- 161
+if$ -- 1978
+int.to.chr$ -- 0
+int.to.str$ -- 21
+missing$ -- 19
+newline$ -- 106
+num.names$ -- 53
+pop$ -- 191
+preamble$ -- 1
+purify$ -- 113
+quote$ -- 0
+skip$ -- 287
+stack$ -- 0
+substring$ -- 457
+swap$ -- 144
+text.length$ -- 16
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 76
+warning$ -- 3
+while$ -- 82
+width$ -- 23
+write$ -- 229
+(There was 1 error message)

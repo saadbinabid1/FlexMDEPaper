@@ -1,0 +1,121 @@
+% This is LLNCS.DEM the demonstration file of
+% the LaTeX macro package from Springer-Verlag
+% for Lecture Notes in Computer Science,
+% version 2.4 for LaTeX2e as of 16. April 2010
+%
+\documentclass{llncs}
+%
+
+% Put edit comments in a really ugly standout display
+\usepackage{xcolor} 
+\usepackage{ifthen}
+\usepackage{amssymb}
+\usepackage{graphicx}
+ 
+\newboolean{showcomments}
+\setboolean{showcomments}{true} % toggle to show or hide comments
+\ifthenelse{\boolean{showcomments}}
+  {\newcommand{\nb}[2]{
+    \fcolorbox{gray}{yellow}{\bfseries\sffamily\scriptsize#1}
+    {$\blacktriangleright$#2$\blacktriangleleft$}
+   }
+   \newcommand{\version}{\emph{\scriptsize$-$working$-$}} 
+  }
+  {\newcommand{\nb}[2]{}
+   \newcommand{\version}{} 
+  }
+ 
+\usepackage[linewidth=1pt]{mdframed}
+\usepackage{lipsum} 
+
+% for comments
+\newcommand\levi[1]{\nb{Levi}{\textcolor{teal}{#1}}}
+\newcommand\salman[1]{\nb{Salman}{\textcolor{blue}{#1}}}
+\newcommand\ch[1]{\nb{Chih-Hong}{\textcolor{red}{#1}}}
+\newcommand\mav[1]{\nb{Mav}{\textcolor{black}{#1}}}
+
+\usepackage{makeidx}  % allows for indexgeneration
+%
+\begin{document}
+%
+\frontmatter          % for the preliminaries
+
+\mainmatter              % start of the contributions
+%
+\title{Process-Aware Model-Driven Development Environments}
+%
+\titlerunning{}  % abbreviated title (for running head)
+%                                     also used for the TOC unless
+%                                     \toctitle is used
+%
+\author{Levi L\'ucio\inst{1} \and Saad Bin Abid\inst{1}
+ \and Salman Rahman\inst{1} \and Vincent
+Aravantinos\inst{1} \and Ralf Kuestner\inst{2}\and Eduard Harwardt\inst{2}}
+%
+\authorrunning{} % abbreviated author list (for running head)
+%
+%%%% list of authors for the TOC (use if author list has to be modified)
+\tocauthor{}
+%
+\institute{
+fortiss GmbH\\
+Guerickestra\ss e 25, 80805 M\"unchen\\
+\email{\{lucio,abid,aravantinos\}@fortiss.org,
+salman.rahman@tum.de}\\
+\and
+Diehl Aerospace\\
+\email{ralf.kuestner,eduard.harwardt\}@diehl.com}
+}
+
+\maketitle            
+
+\begin{abstract}
+Due to recent advances in Domain Specific Language (DSL) workbenches, it has
+become possible to build model-driven development environments as sets of
+individual DSLs that get composed for a specific purpose.
+In this paper we explore how such model-driven development environments can
+become process-aware, in order to assist the user when building a model.
+We offer an explanation to our ideas at three levels of abstraction:
+1) the \emph{meta-meta} level, where brick DSLs are built using the
+Meta-Programming System (MPS) workbench; 2) the \emph{meta} level, where brick
+DSLs are assembled into frameworks that are further tailored for
+particular modelling scenarios through the introduction of an explicit process
+for model construction; and 3) the \emph{model} level, where
+models are built through progressive tool-guided refinements and automated
+steps based on the process introduced at the \emph{meta} level.
+We exemplify our approach by providing the main highlights of the ongoing
+development of a model-driven requirements gathering environment for our
+industrial partners.
+
+% The levels of abstr are illustrated: the individual brick languages for
+% gathering requirements; how these DSLs are composed and organised to 
+% fulfill our partner's requirements gathering process; and an example of using
+% the system to build 
+
+\end{abstract} 
+
+\input{text/introduction} 
+
+\input{text/metameta}
+
+\input{text/meta} 
+
+\input{text/model}
+
+%\input{text/flow_algorithm}
+
+\input{text/related_work}
+
+\input{text/conclusion} 
+
+\section*{Acknowledgements}
+This work presented in this paper was developed in the context of the
+``IETS3'' research project, funded by the German Federal Ministry of Education
+and Research under code 01IS15037A/B.
+
+%\newpage
+
+\bibliographystyle{plain}
+\bibliography{bibliography}
+
+\end{document}

@@ -1,0 +1,49 @@
+\section{Conclusions and Future Work}
+\label{sec:conclusion}
+
+We have presented a technique for the construction of
+domain-specific model editors in MPS, where these editors are based on
+a set of composed DSLs and on a description of the process that
+should be followed when building the models for that domain. We have applied our
+approach to the construction of an editor for gathering software requirements
+at two levels: firstly, we build an abstract requirements gathering framework,
+following the guidelines in the MIRA framework~\cite{MIRA13}; secondly, we
+specialize that framework for our industrial partners at Diehl, by introducing
+a specific requirements refinement process for controllers for cooling systems.
+
+The main technical contribution of this paper are the means to define a process
+to assist in building a model in a domain-specific model-driven development
+framework. This process is based on a set of model analyses running in the
+background of the framework and can guide the user until the model is complete.
+At a methodological level, our contribution regards our ideas on the separation
+of the \emph{framework customizer} and the  \emph{domain specific tool
+developer} roles. While the former is responsible for defining a number of
+fundamental ``brick'' DSLs, the latter further specializes them for a particular
+application by potentially adding more languages and organizing the whole
+according to a process.
+
+In its current state, the main shortcoming of the technique we propose in this
+paper is the fact that it is the complete responsibility of the domain-specific
+tool developer to check the consistency of the properties being checked during
+the unfolding of the process, as well as their logical sequence in the process.
+Additional assistance during this step could be envisaged, for example in the
+form of automated checks for logical inconsistencies in the conditions that
+define each state in the process. Also, arbitrary deletions in the model may
+lead to inconsistencies in the current state of edition in the dashboard. A
+carefully designed process may avoid such inconsistencies, although automated
+help for the tool developer would also be important here. Finally, scalability
+is also an issue as analyses currently run very often in the background,
+which will rapidly lead to performance degradation in larger systems. Potential
+solutions to this problem are currently being investigated by colleagues of our
+at fortiss~\cite{Models17Sudeep}.
+
+As future work, beyond mitigating the shortcomings identified above, we will
+work continue working with Diehl Aerospace to further develop the case study we
+present in this paper into a usable requirements gathering system. Other partner companies
+have shown interest in applying the work we present to domains other than
+requirements engineering, which means in the future building or assembling
+different language stacks as well as different processes. Closer integration
+with MPS is necessary in order to perform analyses in the background only when
+strictly needed. Finally, mechanisms for the systematic creation of standalone
+editors that implement process-aware model-driven development environments
+is also in our future plans.

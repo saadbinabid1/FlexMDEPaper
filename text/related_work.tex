@@ -1,0 +1,57 @@
+\section{Related Work}
+\label{sec:related_work}
+
+Mechanisms for providing some kind of guidance to the domain-specific
+language user are present, to a smaller or larger extent, in all DSL definition
+workbenches. In most cases, that guidance is provided in the form of
+correctness-by-construction (e.g. only correct models that conform to a
+metamodel can be built), or a-posteriori checks for conformance to certain
+well-formedness rules. This is the case for example for DSL workbenches such as
+Sirius~\cite{DBLP:conf/asplos/HauswaldLZLRKDM15},
+Xtext~\cite{DBLP:conf/oopsla/EysholdtB10}, AutoFocus3~\cite{AF315},
+MetaEdit+\cite{DBLP:conf/sle/Tolvanen16} or MPS~\cite{DBLP:conf/pppj/PechSV13}
+itself. However, none of those tools is capable of natively providing the means
+to explicitely define a model construction process or methodology that can
+assist users when building instances of DSLs specified in those environments.
+
+Model construction processes naturally depends on the domain the DSLs are aimed
+at. It is thus not surprising that the explicit notion of process is more
+present in modelling environments that are specifically aimed at certain domains
+-- as previously mentioned, the Capella tool is a model-driven engineering
+solution for systems and software architecture engineering which enforces the
+Arcadia~\cite{DBLP:conf/syscon/BonnetVEN16} methodology, aimed at specific
+domains such as transportation, avionics, space or radar; the Soley tool
+suite~\cite{soley}, dedicated to model-based data extraction, processing and
+visualization, includes workflows as first-class citizens.
+Workflows are sequences of model transformations leading to analysis results
+that can be played (semi-)automatically, as well as recorded by the tool from a
+set of user actions.
+
+Coming back to generic workbenches for language constructions, there exists
+a large body of work in the area of model transformation chaining to orchestrate
+the flow of models to achieve a modelling goal. For example, authors
+such as Wagelaar~\cite{wagelaar2006blackbox}, Guerra~\cite{transml} or
+Kolovos~\cite{Kolovos2008} propose mechanisms for automatically orchestrating
+model transformations such that certain modelling goals are achieved. In this
+area, the study which is the closest to the proposal in this paper is the
+FTG+PM framework~\cite{DBLP:conf/sdl/LucioMDVJ13,MustafizDLV12}, built on top of
+the AToM$^3$~\cite{Lara2002} DSL workbench environment. The FTG+PM defines an
+explicit process for the execution of model transformations.
+Enacting that process means that certain model transformations are performed
+automatically, while for others the user will have to input data at given
+points. The differences with the work we present in this paper have to do with
+the fact that our process is non-invasive, and is aimed at advising the user
+rather than executing a pre-defined work flow. With our approach automated actions are
+proposed to the user, who remains in complete control of the model edition process at all
+times.
+
+Note although mechanisms like the one we propose in this paper do not exist in
+DSL workbenches such Sirius or AF3, it is possible to code them by using those
+workbenches' APIs and making usage of already existing analysis structures, as
+we have done for the work we present here. One of the differences that we are
+aware of regarding the AF3 workbench in particular, is that the guidance
+mechanism we present in this paper has been fully implemented using MPSs native
+mechanisms. Buiding the same mechanism in AF3 requires on the other hand
+extending the workbench's core framework using Java.
+
+

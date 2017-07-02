@@ -1,0 +1,21 @@
+\begin{thebibliography}{1}
+
+\bibitem{mps}
+Meta programming system.
+\newblock \url{https://www.jetbrains.com/mps/}.
+
+\bibitem{AF315}
+Vincent Aravantinos, Sebastian Voss, Sabine Teufl, Florian H{\"{o}}lzl, and
+  Bernhard Sch{\"{a}}tz.
+\newblock {AutoFOCUS 3: Tooling Concepts for Seamless, Model-based Development
+  of Embedded Systems}.
+\newblock In {\em {ACES-MB} (co-located with {MoDELS})}, pages 19--26, 2015.
+
+\bibitem{MIRA13}
+S.~Teufl, D.~Mou, and D.~Ratiu.
+\newblock Mira: A tooling-framework to experiment with model-based requirements
+  engineering.
+\newblock In {\em 2013 21st IEEE International Requirements Engineering
+  Conference (RE)}, pages 330--331, July 2013.
+
+\end{thebibliography}

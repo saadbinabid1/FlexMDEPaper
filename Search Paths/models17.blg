@@ -1,0 +1,58 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: models17.aux
+The style file: plain.bst
+Database file #1: bibliography.bib
+Repeated entry---line 409 of file bibliography.bib
+ : @inproceedings{AF315
+ :                     ,
+I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in mps
+Warning--to sort, need author or key in coolingControllerProcess
+Warning--to sort, need author or key in earsctrlProcess
+Warning--to sort, need author or key in soley
+Warning--empty booktitle in autoCode17
+Warning--empty year in autoCode17
+Warning--can't use both author and editor fields in Lara2002
+You've used 25 entries,
+            2118 wiz_defined-function locations,
+            662 strings with 11045 characters,
+and the built_in function-call counts, 9849 in all, are:
+= -- 925
+> -- 527
+< -- 16
++ -- 201
+- -- 175
+* -- 653
+:= -- 1528
+add.period$ -- 78
+call.type$ -- 25
+change.case$ -- 149
+chr.to.int$ -- 0
+cite$ -- 32
+duplicate$ -- 410
+empty$ -- 784
+format.name$ -- 175
+if$ -- 2167
+int.to.chr$ -- 0
+int.to.str$ -- 25
+missing$ -- 20
+newline$ -- 123
+num.names$ -- 57
+pop$ -- 224
+preamble$ -- 1
+purify$ -- 128
+quote$ -- 0
+skip$ -- 314
+stack$ -- 0
+substring$ -- 477
+swap$ -- 147
+text.length$ -- 16
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 92
+warning$ -- 7
+while$ -- 86
+width$ -- 27
+write$ -- 260
+(There was 1 error message)

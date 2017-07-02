@@ -1,0 +1,131 @@
+\section{Introduction}
+\label{sec:intro}
+
+The current trends in domain specific software engineering, domain specific
+languages (DSL) and domain specific modelling languages (DSML) demonstrate the
+interest for \emph{tailored} software solutions.
+When it comes to model-driven engineering (MDE) tools, studies like \cite{DBLP:conf/models/WhittleHRBH13} 
+show that this trend is justified: among the MDE tools considered
+in the reported study, the ones which were successful in penetrating industry
+were precisely those which were developed in a tailored manner for a given
+audience, the recommendation being: ``Match tools to people, not the other way
+around''.
+
+Many technologies now precisely enable this sort of tailoring, among which 
+JetBrains' MPS \cite{DBLP:conf/pppj/PechSV13},
+Xtext \cite{DBLP:conf/oopsla/EysholdtB10},
+Sirius \cite{DBLP:conf/asplos/HauswaldLZLRKDM15}, or the classic MetaEdit+ \cite{DBLP:conf/sle/Tolvanen16}.
+With the maturity of these technologies, one can safely say that building your own MDE tool
+has never been so easy.
+This is an essential enabler and we can now clearly observe how technology
+enthusiasts in various industries put this opportunity to good use, developping their own domain- or even company-specific tools.
+
+On the other hand, as \cite{DBLP:conf/models/WhittleHRBH13} also mentions, tools are an enabler,
+but they are not everything: ``More focus on processes, less on tools".
+Even when a tailored tool is available, allowing the modelling of one's domain through
+many sub-DSLs makes it such that new users often overwhelmed by the amount
+of modelling techniques at their disposal. This is in fact the case for even
+very specialized tools like Sfit \cite{DBLP:conf/vamos/BayhaLAMI16} for the
+modelling of industrial manufacturing -- while modelling a restricted domain,
+the tool contains a large number of different models, mostly rendered as
+diagrams.
+The question of methodology or process then naturally follows: in which order
+should one use the diagrams? More generally, which information should one model
+at a given point in time? The funding of several research projects precisely
+focusing on this question, in particular in connection with MDE, demonstrate the relevance of this
+question:
+CESAR \cite{CESAR}, SPES \cite{DBLP:books/sp/pohl12}, SPES-XT \cite{DBLP:books/sp/spes2016},
+all target the development of methodologies for the domain of embedded systems.
+Similarly, Arcadia \cite{DBLP:conf/syscon/BonnetVEN16} emphasizes the importance
+of the methodology in connection with MDE.
+
+Just like for tools however, methodologies and processes can seldom be general enough to match 
+all use cases and answer all needs. There is henceforth also a need for tailoring at
+that level. To facilitate the acceptance of the methodology, it is however also essential
+that the tool \emph{supports} the methodology: this is for instance the case
+with Capella and Arcadia.
+Capella however, supports only the Arcadia methodology which
+is specific to avionic systems engineering and to the processes of Thales.
+All the above points to the fact that, if the tools can be tailored, the process
+itself should be tailorable.
+
+In this paper, we propose precisely an approach to develop DS(M)Ls in JetBrains'
+MPS, \emph{equipped with a means to customize the tool in order to support a
+given process:} using out approach, in addition to the usual MPS mechanisms to
+develop their DSLs, developers can also explicitly express their own process.
+Such a process of model construction is expressed declaratively as a
+statechart-like diagram, being that the current state is defined by the
+satisfaction of some properties of the model as well as by its previous states.
+For each state, the tool developer can define hints to be displayed as well as
+quickfixes in the form of creation of new artifacts.
+
+In order to clarify our work we draw an analogy with the M-levels defined by the Object Management Group:
+\begin{itemize}
+  \item M3: the MPS tool with its language definition capabilities.
+  \item M2: development and composition of ``brick DSLs'' in a
+  domain-specific model-driven development environment, together with a
+  model construction process for that environment.
+  \item M1: usage of the developed domain-specific tool.
+\end{itemize}
+In addition, we identify four different \emph{roles} in the development and
+usage of the framework:
+\begin{itemize}
+  \item the \emph{framework developer} (in our case JetBrains), who develop MPS
+  (level M3),
+  \item the \emph{framework customizer} (the authors of this paper), who develop
+  a library for process-customizable DSLs (level M2),
+  \item the \emph{(domain-specific) tool developer} 
+    (typically a consultant or the in-house technology department of a company)
+    who actually develops the domain-specific tool, making use of our libraries (level M2),
+  \item and the \emph{user} (level M1).
+\end{itemize}
+
+In this work, we contribute a framework at level M2 to support the tool developer
+in developing a \emph{process-aware} domain-specific tool.
+In particular we have implemented a so-called \textsf{Process} language for
+describing a set of refinement steps including descriptions which are then used to guide and help the user.
+At the M1 level, a ``dashboard'' allows the user to know permanently the next step to achieve.
+
+As a case study, we demonstrate how to use this framework for the
+specific domain of requirements engineering: the step-by-step formalization of requirements is a common approach,
+making it, therefore, an ideal candidate for the development of a process-aware tool.
+For this purpose, we have implemented a set of DSLs supporting the MIRA
+\cite{MIRA13} framework, a general approach for the stepwise formalization of requirements
+focusing on quality assurance for requirements.
+
+A \emph{tool developer} willing to implement their own requirements-engineering
+tool can use this set of DSLs as a basis for their model-based development
+environment, by composing them with more specific DSLs of their own design.
+They can also ``drive'' the user in their requirements formalization process by
+implementing a dedicated process using our \textsf{Process} language.
+We illustrate this approach by developing a requirements-engineering tool
+specialized in the development of hardware cooling systems, inspired
+from a case study coming from our industrial partners at Diehl Aerospace.\\
+
+% The remainder of this paper is structured as follows.  In
+% section~\ref{sec:metameta} we describe the MPS framework, which we use as the
+% technological basis for all the results presented in this paper.
+% Section~\ref{sec:meta} then describes our case study -- a set of languages and a
+% process for the incremental gathering and refinement of requirements,
+% specialized for hardware cooling systems. Then, in section~\ref{sec:model},
+% we exemplify the construction of the requirements for a specific fan-based cooling system, using
+% the previously defined languages and refinement process.
+% Section~\ref{sec:implementation} lifts the veil over some of the implementation
+% details of our work and section~\ref{sec:related_work} provides pointers to work
+% in the literature that closely relates to the results we present here. Finally,
+% section~\ref{sec:conclusion} presents a discussion of this research and 
+% potential future work.
+
+The remainder of this paper is structured as follows.  In
+section~\ref{sec:metameta} we describe the MPS framework, which we use as the
+technological basis for all the results presented in this paper.
+Section~\ref{sec:meta} then describes our case study -- the construction of a
+model-driven development environment for the incremental gathering and
+refinement of requirements. Then, in section~\ref{sec:model}, we exemplify the
+construction of the requirements using the environment described in the previous
+section. Section~\ref{sec:implementation} lifts the veil over some of the
+implementation details of our work and section~\ref{sec:related_work} provides
+pointers to work in the literature that closely relates to the results we
+present here. Finally, section~\ref{sec:conclusion} presents a discussion of
+our research and potential future work.
+

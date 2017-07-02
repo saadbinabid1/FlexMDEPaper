@@ -1,0 +1,108 @@
+\documentclass[conference]{IEEEtran}
+
+\usepackage{calc}
+\usepackage{amssymb}
+\usepackage{amstext}
+\usepackage{amsmath}
+\usepackage{color, colortbl}
+
+\usepackage[final,pdftex]{graphicx}
+        \pdfcompresslevel=9
+        \DeclareGraphicsExtensions{.png} 
+
+\usepackage{chngcntr} 
+\usepackage{epsfig} 
+\usepackage{url}
+ 
+\usepackage{ifthen} 
+\usepackage{amssymb}
+  
+\usepackage{float} 
+\usepackage{stfloats}
+
+\newboolean{showcomments}
+\setboolean{showcomments}{false} % toggle to show or hide comments
+\ifthenelse{\boolean{showcomments}}
+  {\newcommand{\chunk}[2]{%
+	\fcolorbox{black}{yellow}{\bfseries\sffamily\scriptsize#1}%
+   {$\blacktriangleright$#2$\blacktriangleleft$}% 
+}
+   \newcommand{\version}{\emph{\scriptsize$-$working$-$}}
+  }
+  {\newcommand{\chunk}[2]{}
+   \newcommand{\version}{} 
+  }
+
+\newcommand{\saad}[1]{\chunk{Saad}{\textbf{\textcolor{blue}{\textsl{#1}}}}}
+\newcommand{\levi}[1]{\chunk{Levi}{\textbf{\textcolor{red}{\textsl{#1}}}}}
+\newcommand{\salman}[1]{\chunk{Salman}{\textbf{\textcolor{green}{\textsl{#1}}}}}
+\newcommand{\vincent}[1]{\chunk{Vincent}{\textbf{\textcolor{orange}{\textsl{#1}}}}}
+
+\begin{document}
+
+\title{Process-Aware Model-Driven Development Environments}
+
+\author{\IEEEauthorblockN{Levi L\'ucio, Saad Bin Abid, Salman Rahman, Vincent
+Aravantinos} \IEEEauthorblockA{fortiss GmbH\\ 
+Email: \{lucio,abid,aravantinos\}@fortiss.org, salman.rahman@tum.de}
+\and
+\IEEEauthorblockN{Ralf K\"uster, Eduard Harwardt}
+\IEEEauthorblockA{Diehl Aerospace\\
+Email: \{ralf.kuestner,eduard.harwardt\}@diehl.com
+}
+}
+
+\maketitle 
+ 
+\begin{abstract}
+Due to recent advances in Domain Specific Language (DSL) workbenches, it has
+become possible to build model-driven development environments as sets of
+individual DSLs that get composed for a specific purpose.
+In this paper we explore how such model-driven development environments can
+become process-aware, in order to assist the user when building a model.
+We offer an explanation to our ideas at three levels of abstraction:
+1) the \emph{meta-meta} level, where brick DSLs are built using the
+Meta-Programming System (MPS) workbench; 2) the \emph{meta} level, where brick
+DSLs are assembled into frameworks that are further tailored for
+particular modelling scenarios through the introduction of an explicit process
+for model construction; and 3) the \emph{model} level, where
+models are built through progressive tool-guided refinements and automated
+steps based on the process introduced at the \emph{meta} level.
+We exemplify our approach by providing the main highlights of the ongoing
+development of a model-driven requirements gathering environment for our
+industrial partners.
+
+% The levels of abstr are illustrated: the individual brick languages for
+% gathering requirements; how these DSLs are composed and organised to 
+% fulfill our partner's requirements gathering process; and an example of using
+% the system to build 
+
+\end{abstract} 
+
+\input{text/introduction} 
+
+\input{text/metameta}
+
+\input{text/meta} 
+
+\input{text/model}
+
+\input{text/flow_algorithm}
+
+\input{text/related_work}
+
+\input{text/conclusion} 
+
+\section*{Acknowledgements}
+This work presented in this paper was developed in the context of the
+``IETS3'' research project, funded by the German Federal Ministry of Education
+and Research under code 01IS15037A/B.
+
+\newpage
+
+\bibliographystyle{plain}
+\bibliography{bibliography}
+
+\clearpage 
+
+\end{document}
