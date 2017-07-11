@@ -50,10 +50,9 @@ The dashboard is the central artefact the requirements engineer refers to during
 requirements construction. It displays the current hint given to the
 \emph{user}, as well as the current overall state of the requirements refinement
 process as a graph or a table. The hint displayed by the dasboard at the
-beginning of the project is ``Create Project Structure''. As shown in
-figure~\ref{fig:flow_statechart}, this hint is creational. This means the
-\emph{user} can mouse-click on the hint to produce the instances of concepts
-that constitute the initial structure of the project in the same model where the
+beginning of the project is ``Create Project Structure''. This hint is
+creational, which means the \emph{user} can mouse-click on the hint to produce
+the instances of concepts that constitute the initial structure of the project in the same model where the
 dashboard instance has been created.
 % Among those instances are a placeholder for
 % textual requirements and a glossary for the project, as well as a couple of
@@ -83,18 +82,18 @@ a tabular view of the refinement process.
 \includegraphics[width=.8\textwidth]{./figures/DefineCoolingReq.png}
 \caption{The Dashboard provides a hint for adding a new requirement}
 \label{fig:dashboard_newreq}
-\vspace{-.3cm}
+\vspace{-0cm}
 \end{figure*}
 
 The overall desired operation of the cooling controller can be stated in the
-following requirement:\\
-
-``\emph{The cooling controller shall cool down the hardware board by adjusting
-the speed of the fan to an appropriate duty cycle. The duty cycle depends on the
-current temperature of the hardware and whether that temperature is increasing
-between a minimum increase value and a maximum increase value, or decreasing
-between a maximum decrease value and a minimum decrease value.}''\\
- \vspace{-.6cm}
+requirement in figure~\ref{fig:new_req}, which is an instance of the
+\textsf{Requirements} language.
+% ``\emph{The cooling controller shall cool down the hardware board by adjusting
+% the speed of the fan to an appropriate duty cycle. The duty cycle depends on the
+% current temperature of the hardware and whether that temperature is increasing
+% between a minimum increase value and a maximum increase value, or decreasing
+% between a maximum decrease value and a minimum decrease value.}''\\
+ \vspace{-0cm}
 \begin{figure*}[!h]
 \centering 
 \includegraphics[width=1\textwidth]{./figures/textReqIncomplete.png}
@@ -103,12 +102,8 @@ between a maximum decrease value and a minimum decrease value.}''\\
 \vspace{-.6cm}
 \end{figure*}
 
-Figure~\ref{fig:new_req} formalizes this high-level requirement in
-the \textsf{Requirements} language instance that was previously created when the 
-project structure was automatically generated. From this text the requirements engineer can then
-extract minimum and maximum threshold terms for expected temperatures into
-the glossary model, that was itself also created with the project structure.
-Extracting these terms into the glossary is achieved using the
+From this text the requirements engineer can then
+extract minimum and maximum threshold terms using the 
 MPS intention ``Extract Into Glossary'' associated to the root concepts of the
 \textsf{Requirements} language. When used, this MPS intention generates in the
 the project's glossary an entry with the same names as words
@@ -150,9 +145,8 @@ is going up or down.
 Given the hint is creational, the requirements engineer can generate an empty
 table in the project model by pressing it. Such table is depicted in
 figure~\ref{fig:FAU_behavior_thresh}.
-Note that the minimum and maximum thresholds are already set in the table, as
-the process itself defines they should copied from the threshold values
-previously defined in the glossary.
+Note that the minimum and maximum threshold values in the table are preset in
+advance, as the process itself defines they should copied from the threshold values previously defined in the glossary.
 
 The requirements engineer can now proceed to the last refinement, which is to
 precisely define the behavior of the cooling fan's controller. In order to do
@@ -165,21 +159,20 @@ given intervals of temperature, when the temperature is going up or down.
 % \label{fig:FAU_behavior_thresh}
 % \end{figure}
 The \textsf{Table} language itself implements checks for completeness (all the
-temperatures between the thresholds are mapped onto duty cycles) and functionality (only one duty
-cycle value is given per temperature). Violations of these properties are
-pointed out in the editor as red markers.
-Figure~\ref{fig:FAU_behavior_2d}\levi{correct the text for the empty table pic}
-represents a filled in table holding, for non-disclosure reasons, a fictitious complete behavior of the fan's controller. In the figure the 2D-graph
-representation of the table is also shown, and it can be produced by applying
-the “Visualize Graph” MPS intention to the table.
- \vspace{-.6cm}
+temperatures between the thresholds are mapped onto duty cycles) and
+functionality (only one duty cycle value is given per temperature). Violations
+of these properties are pointed out in the editor as red markers.
+Figure~\ref{fig:FAU_behavior_2d} represents a filled in table holding, for
+non-disclosure reasons, a fictitious complete behavior of the fan's controller.
+In the figure the 2D-graph representation of the table is also shown, and it can
+be produced by applying the “Visualize Graph” MPS intention to the table.
 \begin{figure*}[!h]
 \centering
 \includegraphics[width=.7\textwidth]{./figures/DiehlTableAnd2DGraph.png}
 \caption{An filled in table and associated 2D visualization of the defined
 function}
 \label{fig:FAU_behavior_2d}
- \vspace{-.6cm}
+ \vspace{-.3cm}
 \end{figure*}
 
 % \saad{Text moved from model level to instance level} Our example case study
@@ -200,8 +193,8 @@ designed a process to assist the user in building natural langage-like
 requirements for embedded controllers. Note that
 both~\cite{coolingControllerProcess,earsctrlProcess} are GitHub repositories
 that contain not only MPS projects, but also additional information about how to
-install those projects as well and pointers to videos demonstrating the usage of
-our framework.
+install those projects as well and pointers to videos demonstrating all the
+steps and artefacts we explicitely or implicitely describe in this paper.
  \vspace{-.6cm}
   
 

@@ -23,18 +23,18 @@ enthusiasts in various industries put this opportunity to good use, developping 
 On the other hand, as \cite{DBLP:conf/models/WhittleHRBH13} also mentions, tools are an enabler,
 but they are not everything: ``More focus on processes, less on tools".
 Even when a tailored tool is available, allowing the modelling of one's domain through
-many sub-DSLs makes it such that new users often overwhelmed by the amount
-of modelling techniques at their disposal. This is in fact the case for even
+many sub-DSLs makes it such that new users often become overwhelmed by the
+amount of modelling techniques at their disposal. This is in fact the case for even
 very specialized tools like Sfit \cite{DBLP:conf/vamos/BayhaLAMI16} for the
 modelling of industrial manufacturing -- while modelling a restricted domain,
 the tool contains a large number of different models, mostly rendered as
 diagrams.
 The question of methodology or process then naturally follows: in which order
 should one use the diagrams? More generally, which information should one model
-at a given point in time? The funding of several research projects precisely
-focusing on this question, in particular in connection with MDE, demonstrate the relevance of this
-question: for example SPES-XT \cite{DBLP:books/sp/spes2016},
-targets the development of methodologies for the domain of embedded systems.
+at a given point in time? The funding of research projects focusing on this
+question, in particular in connection with MDE, demonstrate the relevance of
+this question: for example SPES-XT \cite{DBLP:books/sp/spes2016}, targets the
+development of methodologies for the domain of embedded systems.
 Similarly, Arcadia \cite{DBLP:conf/syscon/BonnetVEN16} emphasizes the importance
 of the methodology in connection with MDE.
 
@@ -52,7 +52,7 @@ In this paper, we propose precisely an approach to develop DS(M)Ls in JetBrains'
 MPS, \emph{equipped with a means to customize the tool in order to support a
 given process:} using out approach, in addition to the usual MPS mechanisms to
 develop their DSLs, developers can also explicitly express their own process.
-Such a process of model construction is expressed declaratively as a
+Such a process of model construction is declared as a
 statechart-like diagram, being that the current state is defined by the
 satisfaction of some properties of the model as well as by its previous states.
 For each state, the tool developer can define hints to be displayed as well as
@@ -85,7 +85,8 @@ In this work, we contribute a framework at level M2 to support the tool develope
 in developing a \emph{process-aware} domain-specific tool.
 In particular we have implemented a so-called \textsf{Process} language for
 describing a set of refinement steps including descriptions which are then used to guide and help the user.
-At the M1 level, a ``dashboard'' allows the user to know permanently the next step to achieve.
+At the M1 level, a ``dashboard'' allows the user to know permanently what is the
+next step to achieve.
 
 As a case study, we demonstrate how to use this framework for the
 specific domain of requirements engineering: the step-by-step formalization of requirements is a common approach,
