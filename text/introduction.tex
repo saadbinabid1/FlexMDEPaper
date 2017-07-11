@@ -33,19 +33,18 @@ The question of methodology or process then naturally follows: in which order
 should one use the diagrams? More generally, which information should one model
 at a given point in time? The funding of several research projects precisely
 focusing on this question, in particular in connection with MDE, demonstrate the relevance of this
-question:
-CESAR \cite{CESAR}, SPES \cite{DBLP:books/sp/pohl12}, SPES-XT \cite{DBLP:books/sp/spes2016},
-all target the development of methodologies for the domain of embedded systems.
+question: for example SPES-XT \cite{DBLP:books/sp/spes2016},
+targets the development of methodologies for the domain of embedded systems.
 Similarly, Arcadia \cite{DBLP:conf/syscon/BonnetVEN16} emphasizes the importance
 of the methodology in connection with MDE.
 
-Just like for tools however, methodologies and processes can seldom be general enough to match 
-all use cases and answer all needs. There is henceforth also a need for tailoring at
-that level. To facilitate the acceptance of the methodology, it is however also essential
-that the tool \emph{supports} the methodology: this is for instance the case
-with Capella and Arcadia.
-Capella however, supports only the Arcadia methodology which
-is specific to avionic systems engineering and to the processes of Thales.
+Just like for tools however, methodologies and processes can seldom be general
+enough to match all use cases and answer all needs. There is thus also a need
+for tailoring at that level. To facilitate the acceptance of the methodology, it
+is essential that the tool \emph{supports} the methodology: this is for instance
+the case with Capella and Arcadia.
+Capella however, supports only the Arcadia methodology which is specific to
+avionic systems engineering and to the processes of Thales.
 All the above points to the fact that, if the tools can be tailored, the process
 itself should be tailorable.
 
@@ -64,10 +63,10 @@ In order to clarify our work we draw an analogy with the M-levels defined by the
   \item M3: the MPS tool with its language definition capabilities.
   \item M2: development and composition of ``brick DSLs'' in a
   domain-specific model-driven development environment, together with a
-  model construction process for that environment.
+  model construction process.
   \item M1: usage of the developed domain-specific tool.
 \end{itemize}
-In addition, we identify four different \emph{roles} in the development and
+We also identify four different \emph{roles} in the development and
 usage of the framework:
 \begin{itemize}
   \item the \emph{framework developer} (in our case JetBrains), who develop MPS
@@ -93,14 +92,14 @@ For this purpose, we have implemented a set of DSLs supporting the MIRA
 \cite{MIRA13} framework, a general approach for the stepwise formalization of requirements
 focusing on quality assurance for requirements.
 
-A \emph{tool developer} willing to implement their own requirements-engineering
-tool can use this set of DSLs as a basis for their model-based development
-environment, by composing them with more specific DSLs of their own design.
+A \emph{tool developer} can use this set of DSLs as a basis for their
+model-based development environment, by composing them with more specific DSLs
+of their own design.
 They can also ``drive'' the user in their requirements formalization process by
 implementing a dedicated process using our \textsf{Process} language.
 We illustrate this approach by developing a requirements-engineering tool
-specialized in the development of hardware cooling systems, inspired
-from a case study coming from our industrial partners at Diehl Aerospace.\\
+specialized in the development of hardware cooling systems, inspired from a case
+study coming from our industrial partners at Diehl Aerospace.
 
 % The remainder of this paper is structured as follows.  In
 % section~\ref{sec:metameta} we describe the MPS framework, which we use as the
@@ -123,9 +122,8 @@ Section~\ref{sec:meta} then describes our case study -- the construction of a
 model-driven development environment for the incremental gathering and
 refinement of requirements. Then, in section~\ref{sec:model}, we exemplify the
 construction of the requirements using the environment described in the previous
-section. Section~\ref{sec:implementation} lifts the veil over some of the
-implementation details of our work and section~\ref{sec:related_work} provides
-pointers to work in the literature that closely relates to the results we
-present here. Finally, section~\ref{sec:conclusion} presents a discussion of
-our research and potential future work.
+section. Section~\ref{sec:related_work} provides pointers to work in the
+literature that closely relates to the results we present here. Finally,
+section~\ref{sec:conclusion} presents a discussion of our research and potential
+future work.
 

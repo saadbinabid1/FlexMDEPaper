@@ -61,12 +61,12 @@ structure of the project as a set of instances of different languages is
 depicted in figure~\ref{fig:newreq_proj}. The project itself is a model inside
 an MPS solution.
 
-\begin{figure}[!h]
-\centering 
-\includegraphics[width=.5\textwidth]{./figures/NewProject.png}
-\caption{A new cooling controller requirements project}
-\label{fig:newreq_proj}
-\end{figure}
+% \begin{figure}[!h]
+% \centering 
+% \includegraphics[width=.5\textwidth]{./figures/NewProject.png}
+% \caption{A new cooling controller requirements project}
+% \label{fig:newreq_proj}
+% \end{figure}
 
 After the structure of the project has been built a new hint, as shown in
 figure~\ref{fig:dashboard_newreq}, proposes to
@@ -111,15 +111,16 @@ MPS intention ``Extract Into Glossary'' associated to the root concepts of the
 the project's glossary an entry with the same names as words
 or sets of words selected from the text.
 The values for the threshold terms need then be manually added to the glossary
-as can be seen in figure~\ref{fig:glossary}. This constitutes the first refinement of the
-original abstract requirement.
+as can be seen in figure~\ref{fig:glossary}\levi{correct this text because the
+glossary pic is gone}.
+This constitutes the first refinement of the original abstract requirement.
 
-\begin{figure}[!h]
-\centering 
-\includegraphics[width=.7\textwidth]{./figures/glossary.png}
-\caption{The glossary for the cooling controller requirements}
-\label{fig:glossary}
-\end{figure}
+% \begin{figure}[!h]
+% \centering 
+% \includegraphics[width=.7\textwidth]{./figures/glossary.png}
+% \caption{The glossary for the cooling controller requirements}
+% \label{fig:glossary}
+% \end{figure}
 
 % Although the glossary terms for the temperature thresholds have now been
 % defined, the requirement itself is still not complete, as shown by the
@@ -144,13 +145,13 @@ all states that precede the current state have been visited. This is due to the 
 that forking processes achieve the same results by executing the same actions in
 alternative orders.}, which at this point proposes the creation of a table where
 such a function can be defined. 
-\begin{figure*}[!h] 
-\centering 
-\includegraphics[width=1\textwidth]{./figures/CreateTable.png}
-\caption{The dashboard proposes creating a table to define the behavior of the
-fan controller}
-\label{fig:FAU_behavior}
-\end{figure*}
+% \begin{figure*}[!h] 
+% \centering 
+% \includegraphics[width=1\textwidth]{./figures/CreateTable.png}
+% \caption{The dashboard proposes creating a table to define the behavior of the
+% fan controller}
+% \label{fig:FAU_behavior}
+% \end{figure*}
 Given the hint is creational, the requirements engineer can generate an empty
 table in the project model by pressing it. Such table is depicted in
 figure~\ref{fig:FAU_behavior_thresh}.
@@ -162,24 +163,24 @@ The requirements engineer can now proceed to the last refinement, which is to
 precisely define the behavior of the cooling fan's controller. In order to do
 this it is necessary to manually insert rows in the table that define the duty cycle for
 given intervals of temperature, when the temperature is going up or down. 
-\begin{figure}[!h]
-\centering 
-\includegraphics[width=1\textwidth]{./figures/DiehlTable.png}
-\caption{An empty table with filled in threshold values}
-\label{fig:FAU_behavior_thresh}
-\end{figure}
+% \begin{figure}[!h]
+% \centering 
+% \includegraphics[width=1\textwidth]{./figures/DiehlTable.png}
+% \caption{An empty table with filled in threshold values}
+% \label{fig:FAU_behavior_thresh}
+% \end{figure}
 The \textsf{Table} language itself implements checks for completeness (all the
 temperatures between the thresholds are mapped onto duty cycles) and functionality (only one duty
 cycle value is given per temperature). Violations of these properties are
-pointed out in the editor as red markers. Figure~\ref{fig:FAU_behavior_2d}
-represents a filled in table holding, for non-disclosure reasons, a fictitious
-complete behavior of the fan's controller. In the figure the 2D-graph
+pointed out in the editor as red markers.
+Figure~\ref{fig:FAU_behavior_2d}\levi{correct the text for the empty table pic}
+represents a filled in table holding, for non-disclosure reasons, a fictitious complete behavior of the fan's controller. In the figure the 2D-graph
 representation of the table is also shown, and it can be produced by applying
 the “Visualize Graph” MPS intention to the table.
 
 \begin{figure*}[!h]
 \centering
-\includegraphics[width=1\textwidth]{./figures/DiehlTableAnd2DGraph.png}
+\includegraphics[width=.7\textwidth]{./figures/DiehlTableAnd2DGraph.png}
 \caption{An filled in table and associated 2D visualization of the defined
 function}
 \label{fig:FAU_behavior_2d}

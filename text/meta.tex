@@ -21,7 +21,7 @@ as follows:
 \end{itemize}
 
 This broad classification of the concepts necessary to build a requirements
-gathering framework is helpful for us in a operational manner. We wish to build
+gathering framework is helpful to us in a operational manner. We wish to build
 our framework as a set of composed domain specific languages in the MPS
 environment. For that we need an architecture around which we can organize such
 languages. The MIRA architecture thus helps us in understanding how to group and
@@ -29,10 +29,18 @@ compose those languages. A particularity of MIRA is that \emph{quality
 assurance} is natively integrated in the framework. MIRA's quality assurance
 also has an operational counterpart in the MPS environment -- in terms of
 language checks that come with the DSLs defined in MPS as well as other (formal)
-analyses that can be defined by \emph{domain-specific tool developer} building
-the framework. As we will explain further ahead in this paper, these analyses
-are orchestrated during the definition of the \emph{process} when building a
-tailored model-driven development environment and correspond to MIRA's verification activities.
+analyses that can be defined by the \emph{domain-specific tool developer}
+building the framework. These analyses are orchestrated during the definition of
+the \emph{process} when building a tailored model-driven development environment
+and correspond to MIRA's verification activities.
+
+\begin{figure*}[!h]
+\centering
+\includegraphics[width=.75\textwidth]{./figures/Fig2.png}
+\caption{A language stack for gathering software requirements
+}
+\label{fig:meta_struct_reqs}
+\end{figure*}
 
 In figure~\ref{fig:meta_struct_reqs} we present the first two meta-levels of our
 framework in the form of a stack of languages: at the bottom of the stack we
@@ -55,7 +63,7 @@ approach in practice. That subset is as follows:
   terms.
   \item \emph{Requirements List}: this aspect of the framework contains a
   \textsf{Requirements} language for expressing textual requirements, together with meta-information
-  such as the author of the requirement or the requirement's current state
+  such as the author of the requirement or the requirement's current state.
 %   ; a \textsf{Component} language\levi{we don't actually use components in our
 %   example} to describe how systems are descomposed in components and how those
 %   components behave and interact with each other.
@@ -89,33 +97,32 @@ approach in practice. That subset is as follows:
 %   the languages in the framework.
 \end{itemize}
 
-Note that although we have used MIRA as a reference for our project work with
-our industrial partners, additional explanations on the framework are beyond the
-scope of this paper. We refer the interested reader to~\cite{MIRA13}.
+% Note that although we have used MIRA as a reference for our project work with
+% our industrial partners, additional explanations on the framework are beyond the
+% scope of this paper. We refer the interested reader to~\cite{MIRA13}.
 
-\begin{figure*}[!h]
-\centering
-\includegraphics[width=.7\textwidth]{./figures/Fig1.png}
-\caption{A customizable language stack for gathering software requirements}
-\label{fig:meta_struct_reqs}
-\end{figure*}
+% \begin{figure*}[!h]
+% \centering
+% \includegraphics[width=.7\textwidth]{./figures/Fig1.png}
+% \caption{A customizable language stack for gathering software requirements}
+% \label{fig:meta_struct_reqs}
+% \end{figure*}
 
 \subsection{Customising the Requirements Gathering Framework: An Industrial Case
 Study}
 \label{sec:custom_frame}
 
-Nowadays, many embedded hardware systems (e.g. in laptops, cars or
-planes) are assembled together with cooling systems. The main purpose of
-those cooling systems is to maintain an appropriate temperature during the
-operation of those hardware electronics.
-
-In this section we will extend the generic requirements gathering framework that
-has been introduced in section~\ref{sec:generic_req_fram} in order to specialize it for
-gathering requirements for software controllers for hardware cooling systems. In
-particular, we will add a process for specifying this type of requirements. 
+Nowadays, many embedded hardware systems (e.g. in laptops, cars or planes) are
+assembled together with cooling systems. The main purpose of those cooling
+systems is to maintain an appropriate temperature during the operation of those
+hardware electronics. In this section we will extend the generic requirements
+gathering framework that has been introduced in
+section~\ref{sec:generic_req_fram} in order to specialize it for gathering
+requirements for software controllers for hardware cooling systems. In
+particular, we will add a process for specifying this type of requirements.
 
 The case study we present here is inspired by a requirements document (that for
-non-disclosure reasons we cannot cite here) that was made available to us by
+non-disclosure reasons we cannot cite here) which was made available to us by
 Diehl aerospace, one of our industrial partners. Diehl builds hardware for
 airplanes and, as such, cooling systems for that hardware also need to be
 produced. The process of gathering requirements the software that controls such
@@ -124,9 +131,10 @@ problem to Diehl, as the current requirements gathering process imposes a large
 amount of effort to ensure that those requirements are documented in a fashion
 that is complete, correct and traceable. Additionally, the aerospace industry
 has to adhere to strict regulations such that their systems can be certified to
-be used in production. Software reviewers require precise documentation for
-requirements, which is difficult to produce and maintain when little automation
-is available.
+be used in production. 
+% Software reviewers require precise documentation for
+% requirements, which is difficult to produce and maintain when little automation
+% is available.
 
 The work presented in this section constitutes our effort to provide
 a proof-of-concept model-based development environment to the Diehl engineers
@@ -235,42 +243,34 @@ figure~\ref{fig:flow_statechart}.
 % requirement are caused because of the failed constraints
 % discussed earlier.\saad{drafted}
 
-\begin{figure*}[!h]
-\centering
-\includegraphics[width=.75\textwidth]{./figures/Fig2.png}
-\caption{A specialized language stack for gathering software requirements
-}
-\label{fig:model_reqs}
-\end{figure*}
-
-For clarity reasons, let us now briefly explain the process model depicted in
-figure~\ref{fig:flow_statechart}. The requirements engineer is initially
-provided with an empty dashboard with a creational hint to start constructing
-the requirements for the cooling controller.
-At this point an empty requirements project can be automatically built using the
-creational hint. An informational hint is then provided to guide the
-requirements engineer through defining the threshold values as glossary terms in
-the requirement and/or complete the requirements with all necessary data.
-Upon successfully building a requirement and defining the glossary terms, the
-requirements engineer is provided with a creational hint to perform the
-refinement step from a requirement and its threshold values into a cooling
-function describing the behavior of the controller.
-An empty cooling function (i.e., a model of the \textsf{Table} language) is then
-automatically created with the minimum and maximum thresholds values coming from
-the glossary terms. The user is then provided with feedback from the
-\textsf{Table} language until a correct cooling function is defined.
+% For clarity reasons, let us now briefly explain the process model depicted in
+% figure~\ref{fig:flow_statechart}\levi{attach this text to a different picture}.
+% The requirements engineer is initially provided with an empty dashboard with a creational hint to start constructing
+% the requirements for the cooling controller.
+% At this point an empty requirements project can be automatically built using the
+% creational hint. An informational hint is then provided to guide the
+% requirements engineer through defining the threshold values as glossary terms in
+% the requirement and/or complete the requirements with all necessary data.
+% Upon successfully building a requirement and defining the glossary terms, the
+% requirements engineer is provided with a creational hint to perform the
+% refinement step from a requirement and its threshold values into a cooling
+% function describing the behavior of the controller.
+% An empty cooling function (i.e., a model of the \textsf{Table} language) is then
+% automatically created with the minimum and maximum thresholds values coming from
+% the glossary terms. The user is then provided with feedback from the
+% \textsf{Table} language until a correct cooling function is defined.
 
 % at which
 % point the user is provided with an informational hint that this part of the
 % requirements is finished.
 
-\begin{figure*}[!h]
-\centering
-\includegraphics[width=.9\textwidth]{./figures/FlowChart_V2.png}
-\caption{A statechart-like representation of an instance of the \textsf{Flow}
-language}
-\label{fig:flow_statechart}
-\end{figure*}
+% \begin{figure*}[!h]
+% \centering
+% \includegraphics[width=.9\textwidth]{./figures/FlowChart_V2.png}
+% \caption{A statechart-like representation of an instance of the \textsf{Flow}
+% language}
+% \label{fig:flow_statechart}
+% \end{figure*}
 
 % Note that the \emph{flow} language example in figure~\ref{fig:flow_statechart} is
 % only an example of a possible flow. Arbitrary flows for describing any
