@@ -40,7 +40,7 @@ and correspond to MIRA's verification activities.\vspace{-.5cm}
 \caption{A language stack for gathering software requirements
 }
 \label{fig:meta_struct_reqs}
-\vspace{-.5cm}
+\vspace{-.7cm}
 \end{figure*}
 In figure~\ref{fig:meta_struct_reqs} we present the first two meta-levels of our
 framework in the form of a stack of languages: at the bottom of the stack we
@@ -52,9 +52,9 @@ this case our group at \emph{fortiss}, is responsible for building this part of
 the stack. We have opted at this point for not including in the figure all the
 DSLs that would be required to have a full-blown implementation of the MIRA
 framework\footnote{The MIRA framework has been implemented as a requirement
-specification plugin for the Autofocus environment~\cite{AF315}}, but rather a
-subset of those languages that is coherent and sufficient to exemplify our
-approach in practice. That subset is as follows:
+specification plugin for the Autofocus environment~\cite{AF315}}, but rather the
+following subset of those languages that is sufficient to exemplify our approach
+in practice:
 \vspace{-.2cm}
 \begin{itemize}
   \item \emph{System Context}: this aspect of the framework contains a
@@ -108,7 +108,7 @@ approach in practice. That subset is as follows:
 % \label{fig:meta_struct_reqs}
 % \end{figure*}
 
-\subsection{Customising the Requirements Gathering Framework: An Industrial Case
+\subsection{Customising the Framework: An Industrial Case
 Study}
 \label{sec:custom_frame}
 \vspace{-.3cm}
@@ -135,17 +135,6 @@ be used in production.
 % Software reviewers require precise documentation for
 % requirements, which is difficult to produce and maintain when little automation
 % is available.
-
-The work presented in this section constitutes our effort to provide
-a proof-of-concept model-based development environment to the Diehl engineers
-for the construction of requirements for hardware cooling systems.
-Note that, although this customization work has been done at fortiss, the idea
-is that in the future this work would be performed by a \emph{domain specific tool
-developer} at Diehl. In a similar fashion, frameworks for gathering requirements for purposes
-other than for cooling systems could also be customized using as basis the same
-original set of languages as the one described in
-section~\ref{sec:generic_req_fram}.
-
 % The automation we present here is modelled as a set of tool-guided refinement
 % steps, starting from abstract requirements and incrementally proceeding towards increasingly concrete ones. The idea behind the
 % framework is that each refinement step will be done using an MPS language at the
@@ -174,12 +163,17 @@ The top part of each state in the figure includes the conditions that need to be
 that state is displayed on the dashboard. 
 
 The conditions described on the statecharts' states are boolean properties that
-are checked on the current state of the requirements project. These boolean
-properties are implemented in the \textsf{ModelProperty} Language in
-figure~\ref{fig:model_reqs}. This language is dedicated to holding the
-algorithms that run the analyses required for our specific requirements
-gathering system.
-\vspace{-.5cm}
+are checked on the current state of a requirements project. These properties are
+implemented in the \textsf{ModelProperty} Language in
+figure~\ref{fig:meta_struct_reqs}. This language holds the algorithms that implements
+the analyses required for our specific requirements gathering system.
+Note that, although this customization work has been done at fortiss, the idea
+is that in the future this work would be performed by a \emph{domain specific tool
+developer} at Diehl. In a similar fashion, frameworks for gathering requirements for purposes
+other than for cooling systems could also be customized using as basis the same
+original set of languages as the one described in
+section~\ref{sec:generic_req_fram}.
+\vspace{-.7cm}
 
 % Given they are
 % specific to the cooling system requirements gathering framework, they are are
