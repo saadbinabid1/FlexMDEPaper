@@ -1,14 +1,15 @@
 \section{The \emph{meta} Level: Defining a Requirements Gathering Framework in
 MPS}
 \label{sec:meta}
-
+\vspace{-.5cm}
 \subsection{A Generic Requirements Gathering Framework}
 \label{sec:generic_req_fram}
-
+\vspace{-.3cm}
 The case study requirements gathering framework we introduce here borrows its
 structure from the Model-based Integrated Requirement Specification and Analysis (MIRA)
 Framework~\cite{MIRA13}. The main parts of the MIRA framework are
 as follows:
+\vspace{-.1cm}
 \begin{itemize}
   \item The \emph{system context} describes the relevant elements that belong
   to the context of the system being developed.
@@ -19,7 +20,7 @@ as follows:
   \item The \emph{QA} collection describes quality assurance activities and
   results.
 \end{itemize}
-
+\vspace{-.1cm}
 This broad classification of the concepts necessary to build a requirements
 gathering framework is helpful to us in a operational manner. We wish to build
 our framework as a set of composed domain specific languages in the MPS
@@ -32,16 +33,15 @@ language checks that come with the DSLs defined in MPS as well as other (formal)
 analyses that can be defined by the \emph{domain-specific tool developer}
 building the framework. These analyses are orchestrated during the definition of
 the \emph{process} when building a tailored model-driven development environment
-and correspond to MIRA's verification activities.
-
+and correspond to MIRA's verification activities.\vspace{-.5cm}
 \begin{figure*}[!h]
 \centering
 \includegraphics[width=.75\textwidth]{./figures/Fig2.png}
 \caption{A language stack for gathering software requirements
 }
 \label{fig:meta_struct_reqs}
+\vspace{-.5cm}
 \end{figure*}
-
 In figure~\ref{fig:meta_struct_reqs} we present the first two meta-levels of our
 framework in the form of a stack of languages: at the bottom of the stack we
 have MPS itself, with its meta-edition capabilities; in the layer immediately
@@ -55,7 +55,7 @@ framework\footnote{The MIRA framework has been implemented as a requirement
 specification plugin for the Autofocus environment~\cite{AF315}}, but rather a
 subset of those languages that is coherent and sufficient to exemplify our
 approach in practice. That subset is as follows:
-
+\vspace{-.2cm}
 \begin{itemize}
   \item \emph{System Context}: this aspect of the framework contains a
   \emph{glossary language} to allow defining the domain specific glossary terms that are used across a
@@ -96,7 +96,7 @@ approach in practice. That subset is as follows:
 %   M1), or can already exist as part of the standard MPS analyses available for
 %   the languages in the framework.
 \end{itemize}
-
+\vspace{-.5cm}
 % Note that although we have used MIRA as a reference for our project work with
 % our industrial partners, additional explanations on the framework are beyond the
 % scope of this paper. We refer the interested reader to~\cite{MIRA13}.
@@ -111,7 +111,7 @@ approach in practice. That subset is as follows:
 \subsection{Customising the Requirements Gathering Framework: An Industrial Case
 Study}
 \label{sec:custom_frame}
-
+\vspace{-.3cm}
 Nowadays, many embedded hardware systems (e.g. in laptops, cars or planes) are
 assembled together with cooling systems. The main purpose of those cooling
 systems is to maintain an appropriate temperature during the operation of those
@@ -154,27 +154,16 @@ section~\ref{sec:generic_req_fram}.
 % that requirements are, to a large extent, well-formed by construction.\\
 
 In order to specialize the language stack presented in
-figure~\ref{fig:meta_struct_reqs} we have added the following languages:
-
-% The framework languages that are utilized are as follows,
-% \begin{itemize}
-%   \item A Glossary language to define the domain specific glossary terms (e.g.,
-%   min/max temprature values).
-%   \item The Requirements language for constructing the requirement (e.g.,
-%   requirment for the cooling system) 
-%     \end{itemize}
-
-\begin{itemize}
-  \item The \textsf{Table} language, for defining the behavior of the
-  controller for the cooling system.
-  \item The \textsf{ModelProperty} Language, which contains algorithms
-  implementing analyses of properties that are specific to the cooling system requirements gathering system.
-\end{itemize}
-
+figure~\ref{fig:meta_struct_reqs} we have added the following languages: the
+\textsf{Table} language, for defining the behavior of the controller for the
+cooling system; the \textsf{ModelProperty} Language, which contains algorithms
+implementing analyses of properties that are specific to the cooling system
+requirements gathering system.
 Additionally, the \emph{domain specific tool developer} also builds a process
-that will configure the dashboard's behavior. The dashboard assists the requirements engineer during
-the construction of the requirements by displaying hints and press-button
-actions that guide the refinement of the requirements model.
+that will configure the dashboard's behavior. The dashboard assists the
+requirements engineer during the construction of the requirements by displaying
+hints and press-button actions that guide the refinement of the requirements
+model.
 
 The dashboard is configured by a description of which hints should be
 provided to the requirements engineer under which conditions. This information
@@ -190,20 +179,21 @@ properties are implemented in the \textsf{ModelProperty} Language in
 figure~\ref{fig:model_reqs}. This language is dedicated to holding the
 algorithms that run the analyses required for our specific requirements
 gathering system.
+\vspace{-.5cm}
 
 % Given they are
 % specific to the cooling system requirements gathering framework, they are are
 % defined at the model level of abstraction (M2), on top of the bare-bones
 % requirements gathering framework.\levi{review levels of abstraction}
 
-Hints can be of two types: \emph{creational} or \emph{informational}.
-Creational hints enable the user to automatically generate new instances of
-languages in order to complete the model. On the other hand, informational hints
-serve as guidance steps to the user but are not associated with automatic
-actions. This means the requirements engineer has to manually perform a set of
-actions in order to further refine the requirements model and reach the next
-state of refinement of the requirements model as defined in the hint model in
-figure~\ref{fig:flow_statechart}. 
+% Hints can be of two types: \emph{creational} or \emph{informational}.
+% Creational hints enable the user to automatically generate new instances of
+% languages in order to complete the model. On the other hand, informational hints
+% serve as guidance steps to the user but are not associated with automatic
+% actions. This means the requirements engineer has to manually perform a set of
+% actions in order to further refine the requirements model and reach the next
+% state of refinement of the requirements model as defined in the hint model in
+% figure~\ref{fig:flow_statechart}. 
 
 % Note that, when the hint is creational, the concepts that need to be created
 % can also be declared together with any data that need to copied from the
