@@ -1,13 +1,13 @@
 \section{The \emph{meta} Level: Defining a Requirements Gathering Framework in
 MPS}
 \label{sec:meta}
-\vspace{-.5cm}
+\vspace{-.3cm}
 \subsection{A Generic Requirements Gathering Framework}
 \label{sec:generic_req_fram}
 \vspace{-.3cm}
 The case study requirements gathering framework we introduce here borrows its
 structure from the Model-based Integrated Requirement Specification and Analysis (MIRA)
-Framework~\cite{MIRA13}. The main parts of the MIRA framework are
+Framework~\cite{MIRA13,AF315}. The main parts of the MIRA framework are
 as follows:
 \vspace{-.1cm}
 \begin{itemize}
@@ -33,28 +33,32 @@ language checks that come with the DSLs defined in MPS as well as other (formal)
 analyses that can be defined by the \emph{domain-specific tool developer}
 building the framework. These analyses are orchestrated during the definition of
 the \emph{process} when building a tailored model-driven development environment
-and correspond to MIRA's verification activities.\vspace{-.5cm}
+and correspond to MIRA's verification activities.\vspace{-.7cm}
 \begin{figure*}[!h]
 \centering
 \includegraphics[width=.75\textwidth]{./figures/Fig2.png}
+\vspace{-.5cm}
 \caption{A language stack for gathering software requirements
 }
 \label{fig:meta_struct_reqs}
-\vspace{-.7cm}
+\vspace{-.5cm}
 \end{figure*}
+
 In figure~\ref{fig:meta_struct_reqs} we present the first two meta-levels of our
 framework in the form of a stack of languages: at the bottom of the stack we
-have MPS itself, with its meta-edition capabilities; in the layer immediately
-above we define the four aspects of the MIRA framework. Each one of the four
+have MPS itself, with its meta-edition capabilities; in the lower half of the
+layer immediately above we define the four aspects of the MIRA framework. Each one of the four
 aspects includes groups of DSLs that allow the requirements engineer to express
 parts of the complete requirements model. The \emph{framework customizer}, in
 this case our group at \emph{fortiss}, is responsible for building this part of
-the stack. We have opted at this point for not including in the figure all the
-DSLs that would be required to have a full-blown implementation of the MIRA
-framework\footnote{The MIRA framework has been implemented as a requirement
-specification plugin for the Autofocus environment~\cite{AF315}}, but rather the
-following subset of those languages that is sufficient to exemplify our approach
-in practice:
+the stack. The subset of MIRA we use for the work we present here is composed of
+the following languages:
+% We have opted at this point for not including in the figure all the
+% DSLs that would be required to have a full-blown implementation of the MIRA
+% framework\footnote{The MIRA framework has been implemented as a requirement
+% specification plugin for the Autofocus environment~\cite{AF315}}, but rather the
+% following subset of those languages that is sufficient to exemplify our approach
+% in practice:
 \vspace{-.2cm}
 \begin{itemize}
   \item \emph{System Context}: this aspect of the framework contains a
@@ -72,7 +76,7 @@ in practice:
   element in MPS.
   \item \emph{QA collection}: the QA collection group includes the
   \textsf{Process} and the \textsf{Dashboard} languages. The \textsf{Process}
-  language allows defining which refinement tasks the requirements engineer.
+  language allows defining refinement tasks for the requirements engineer.
 %   needs to perform in order to build sound requirements. The reason that led us
 %   to the inclusion of the \textsf{Process} language as part of the  \emph{QA
 %   collection} aspect of the framework has to do with the fact that analyses of
@@ -84,11 +88,13 @@ in practice:
   \textsf{Dashboard} language in order to define at which moments a specialized requirements
   gathering framework will provide visual hints and press-button actions that
   guide the requirements engineer in the direction of achieving her task in a
-  correct manner. Note that the \textsf{Process} language allows structuring a
-  \emph{schedule}, or \emph{script} for building a complex model which relies on
-  incrementally satisfying formal properties of the model. These formal
-  properties are defined by the user or exist natively in MPS in the form of
-  e.g. metamodel constraints or type checks.
+  correct manner.
+%   Note that the \textsf{Process} language allows structuring a
+%   \emph{schedule}, or \emph{script} for building a complex model which relies on
+%   incrementally satisfying formal properties of the model. These formal
+%   properties are defined by the user or exist natively in MPS in the form of
+%   e.g. metamodel constraints or type checks.
+
 %   Note that progressing through a particular flow of tasks is measured by the
 %   success or failure of a set of automatic analyses. These analyses run on the
 %   background of a specific requirements framework and will either need to
@@ -96,7 +102,7 @@ in practice:
 %   M1), or can already exist as part of the standard MPS analyses available for
 %   the languages in the framework.
 \end{itemize}
-\vspace{-.5cm}
+\vspace{-.7cm}
 % Note that although we have used MIRA as a reference for our project work with
 % our industrial partners, additional explanations on the framework are beyond the
 % scope of this paper. We refer the interested reader to~\cite{MIRA13}.
@@ -111,7 +117,7 @@ in practice:
 \subsection{Customising the Framework: An Industrial Case
 Study}
 \label{sec:custom_frame}
-\vspace{-.3cm}
+\vspace{-.2cm}
 Nowadays, many embedded hardware systems (e.g. in laptops, cars or planes) are
 assembled together with cooling systems. The main purpose of those cooling
 systems is to maintain an appropriate temperature during the operation of those
@@ -120,6 +126,15 @@ gathering framework that has been introduced in
 section~\ref{sec:generic_req_fram} in order to specialize it for gathering
 requirements for software controllers for hardware cooling systems. In
 particular, we will add a process for specifying this type of requirements.
+\vspace{-.5cm}
+\begin{figure*}[!h]
+\centering 
+\includegraphics[width=.9\textwidth]{./figures/NewDashboard.png}
+\vspace{-.3cm}
+\caption{A newly created dashboard for the requirements framework}
+\label{fig:empty_dashboard}
+\vspace{-.6cm}
+\end{figure*}
 
 The case study we present here is inspired by a requirements document (that for
 non-disclosure reasons we cannot cite here) which was made available to us by
@@ -131,7 +146,7 @@ problem to Diehl, as the current requirements gathering process imposes a large
 amount of effort to ensure that those requirements are documented in a fashion
 that is complete, correct and traceable. Additionally, the aerospace industry
 has to adhere to strict regulations such that their systems can be certified to
-be used in production. 
+be used in production.
 % Software reviewers require precise documentation for
 % requirements, which is difficult to produce and maintain when little automation
 % is available.
@@ -141,39 +156,36 @@ be used in production.
 % right level of abstraction. Constraints enforced by the such languages, together
 % with analyses running on the background sheduled by a flow model will make sure
 % that requirements are, to a large extent, well-formed by construction.\\
-
-In order to specialize the language stack presented in
+In order to specialize the two lower layers of the language stack presented in
 figure~\ref{fig:meta_struct_reqs} we have added the following languages: the
 \textsf{Table} language, for defining the behavior of the controller for the
 cooling system; the \textsf{ModelProperty} Language, which contains algorithms
-implementing analyses of properties that are specific to the cooling system
-requirements gathering system.
-Additionally, the \emph{domain specific tool developer} also builds a process
-that will configure the dashboard's behavior. The dashboard assists the
+the check of properties that are specific to the cooling system requirements
+gathering system. Additionally, the \emph{domain specific tool developer} also
+builds a process that will configure the dashboard's behavior. The dashboard assists the
 requirements engineer during the construction of the requirements by displaying
 hints and press-button actions that guide the refinement of the requirements
-model.
-
-The dashboard is configured by a description of which hints should be
+model. The dashboard is configured by a description of which hints should be
 provided to the requirements engineer under which conditions. This information
 is provided as an instance of the \textsf{Process} language.
-In figure~\ref{fig:flow_statechart} we provide an example of such a process,
-depicted as a statechart, for the	cooling controller requirements.  
-The top part of each state in the figure includes the conditions that need to be satisfied such that the hint in the lower part of
-that state is displayed on the dashboard. 
 
-The conditions described on the statecharts' states are boolean properties that
-are checked on the current state of a requirements project. These properties are
-implemented in the \textsf{ModelProperty} Language in
-figure~\ref{fig:meta_struct_reqs}. This language holds the algorithms that implements
-the analyses required for our specific requirements gathering system.
+In figure~\ref{fig:empty_dashboard} we provide an example of such a process,
+depicted directly in our tool's concrete statechart-like syntax, for the cooling
+controller requirements. The top part of each state in the figure includes the description
+of the conditions that need to be satisfied such that the hint associated to
+that state is displayed on the dashboard. The conditions described on the states
+of figure~\ref{fig:empty_dashboard} are boolean properties that are checked on
+the current state of a requirements project. These properties are implemented in
+the \textsf{ModelProperty} Language in figure~\ref{fig:meta_struct_reqs}. This
+language holds the algorithms that implements the analyses required for our
+specific requirements gathering system.
 Note that, although this customization work has been done at fortiss, the idea
-is that in the future this work would be performed by a \emph{domain specific tool
-developer} at Diehl. In a similar fashion, frameworks for gathering requirements for purposes
-other than for cooling systems could also be customized using as basis the same
-original set of languages as the one described in
-section~\ref{sec:generic_req_fram}.
-\vspace{-.7cm}
+is that in the future this work would be performed by a \emph{domain specific
+tool developer} at Diehl. In a similar fashion, frameworks for gathering
+requirements for purposes other than for cooling systems could also be
+customized using as basis the same original set of languages as the one
+described in section~\ref{sec:generic_req_fram}.
+\vspace{-.3cm}
 
 % Given they are
 % specific to the cooling system requirements gathering framework, they are are
