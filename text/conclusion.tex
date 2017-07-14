@@ -6,8 +6,8 @@ domain-specific model editors in MPS, where these editors are based on
 a set of composed DSLs and on a description of the process that
 should be followed when building the models for that domain. We have applied our
 approach to the construction of an editor for gathering software requirements
-at two levels: firstly, we build an abstract requirements gathering framework,
-following the guidelines in the MIRA framework~\cite{MIRA13}; secondly, we
+at two meta-levels: firstly, we build an abstract requirements gathering
+framework, following the guidelines in the MIRA framework~\cite{MIRA13}; secondly, we
 specialize that framework for our industrial partners at Diehl, by introducing
 a specific requirements refinement process for controllers for cooling systems.
 
@@ -26,13 +26,14 @@ In its current state, the main shortcoming of the technique we propose in this
 paper is the fact that it is the complete responsibility of the domain-specific
 tool developer to check the consistency of the properties being checked during
 the unfolding of the process, as well as their logical sequence in the process.
-Additional assistance during this step could be envisaged, for example in the
-form of automated checks for logical inconsistencies in the conditions that
-define each state in the process. Scalability is also an issue as analyses
-currently run very often in the background, which will rapidly lead to
-performance degradation in larger systems. Potential solutions to this problem
-are currently being investigated by colleagues of our at
-fortiss~\cite{Models17Sudeep}.
+Although we have gathered some information about process construction through
+the two case-studies
+at~\cite{coolingControllerProcessVideo,earsctrlProcessVideo}, it is necessary to
+model larger processes to better understand the advantages and disadvantages of
+our proposal.  Scalability is also an issue as analyses currently
+run very often in the background, which will rapidly lead to performance
+degradation in larger systems. Potential solutions to this problem are currently
+being investigated by colleagues of our at fortiss~\cite{Models17Sudeep}.
 
 As future work, beyond mitigating the shortcomings above, we will continue
 working with Diehl Aerospace to develop the case study we present in this paper

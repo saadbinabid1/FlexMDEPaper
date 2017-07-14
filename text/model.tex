@@ -13,9 +13,9 @@ Because of the fact that airplane doors include slides that should only be
 deployed when a plane lands under specific conditions, the logic running in
 those boards is non-trivial. The goal of the controller is to make
 sure the cooling fan runs at the correct duty cycle (fan speed) such that the 
-the hardware board works under ideal temperature conditions. The calculation of
+hardware board works under ideal temperature conditions. The calculation of
 the duty cycle for the fan at a given time depends on two inputs:
-1) the current temperature of the hardware board that needs cooling and 2);
+1) the current temperature of the hardware board that needs cooling; and 2)
 whether the hardware board's temperature is increasing or decreasing.
  
 % In the text that follows we will describe how to build the requirements for the
@@ -41,7 +41,7 @@ figure~\ref{fig:empty_dashboard}.
 The dashboard is the central artefact the requirements engineer refers to during
 requirements construction. It displays the current hint given to the
 \emph{user}, as well as the current state of the requirements refinement process
-as a graph or a table. The hint displayed by the dasboard at the beginning of
+as a graph or a table. The hint displayed by the dashboard at the beginning of
 the project is ``Create Project Structure''. This hint is creational, which
 means the \emph{user} can mouse-click on the hint to produce the instances of
 concepts that constitute the initial structure of the project in the same model
@@ -65,14 +65,14 @@ a tabular view of the refinement process.
 
 The overall desired behavior of the cooling controller is stated as is an instance of the
 \textsf{Requirements} language in figure~\ref{fig:new_req}. From this
-requirement the requirements engineer can then extract minimum and maximum
+requirement the requirements engineer can then extract minimum and maximum
 threshold values using the MPS intention ``Extract Into Glossary''. When used, this MPS intention generates in the
 project's glossary an entry with the same names as words or sets of words
 selected from the text. This constitutes the first refinement of the original
 abstract requirement. The next step is to define the duty cycle of the fan as a
 function of the current temperature of the controller board and whether the temperature is going
 up or down. The dashboard assists the requirements engineer in this task by
-provinding a hint that, when mouse-clicked, automatically generates a table to
+providing a hint that, when mouse-clicked, automatically generates a table to
 define such behavior. An example of such a table is depicted in
 figure~\ref{fig:FAU_behavior_2d}.
 % ``\emph{The cooling controller shall cool down the hardware board by adjusting
@@ -163,7 +163,7 @@ at~\cite{coolingControllerProcess} as an MPS project. Another case study of
 using our framework is available at~\cite{earsctrlProcess}, where we have
 designed a process to assist the user in building natural langage-like
 requirements for embedded controllers. Two videos demonstrating our
-tool portraying these two case studies can be found
+tool and portraying these two case studies can be found
 at~\cite{coolingControllerProcessVideo,earsctrlProcessVideo}.
  \vspace{-.4cm}
   

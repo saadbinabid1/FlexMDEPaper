@@ -22,18 +22,18 @@ as follows:
 \end{itemize}
 \vspace{-.1cm}
 This broad classification of the concepts necessary to build a requirements
-gathering framework is helpful to us in a operational manner. We wish to build
+gathering framework is helpful to us in an operational manner. We wish to build
 our framework as a set of composed domain specific languages in the MPS
 environment. For that we need an architecture around which we can organize such
 languages. The MIRA architecture thus helps us in understanding how to group and
 compose those languages. A particularity of MIRA is that \emph{quality
 assurance} is natively integrated in the framework. MIRA's quality assurance
-also has an operational counterpart in the MPS environment -- in terms of
+has an operational counterpart in the MPS environment -- in terms of
 language checks that come with the DSLs defined in MPS as well as other (formal)
 analyses that can be defined by the \emph{domain-specific tool developer}
 building the framework. These analyses are orchestrated during the definition of
 the \emph{process} when building a tailored model-driven development environment
-and correspond to MIRA's verification activities.\vspace{-.7cm}
+and correspond to MIRA's verification activities.\vspace{-.8cm}
 \begin{figure*}[!h]
 \centering
 \includegraphics[width=.75\textwidth]{./figures/Fig2.png}
@@ -59,11 +59,11 @@ the following languages:
 % specification plugin for the Autofocus environment~\cite{AF315}}, but rather the
 % following subset of those languages that is sufficient to exemplify our approach
 % in practice:
-\vspace{-.2cm}
+\vspace{-.1cm}
 \begin{itemize}
   \item \emph{System Context}: this aspect of the framework contains a
-  \emph{glossary language} to allow defining the domain specific glossary terms that are used across a
-  requirements project, together with values associated to those
+  \textsf{Glossary} language to allow defining the domain specific glossary
+  terms that are used across a requirements project, together with values associated to those
   terms.
   \item \emph{Requirements List}: this aspect of the framework contains a
   \textsf{Requirements} language for expressing textual requirements, together with meta-information
@@ -120,8 +120,8 @@ Study}
 \vspace{-.2cm}
 Nowadays, many embedded hardware systems (e.g. in laptops, cars or planes) are
 assembled together with cooling systems. The main purpose of those cooling
-systems is to maintain an appropriate temperature during the operation of those
-hardware electronics. In this section we will extend the generic requirements
+systems is to maintain an appropriate temperature during the operation of the
+hardware being used. In this section we will extend the generic requirements
 gathering framework that has been introduced in
 section~\ref{sec:generic_req_fram} in order to specialize it for gathering
 requirements for software controllers for hardware cooling systems. In
@@ -160,7 +160,7 @@ In order to specialize the two lower layers of the language stack presented in
 figure~\ref{fig:meta_struct_reqs} we have added the following languages: the
 \textsf{Table} language, for defining the behavior of the controller for the
 cooling system; the \textsf{ModelProperty} Language, which contains algorithms
-the check of properties that are specific to the cooling system requirements
+for checking properties that are specific to the cooling system requirements
 gathering system. Additionally, the \emph{domain specific tool developer} also
 builds a process that will configure the dashboard's behavior. The dashboard assists the
 requirements engineer during the construction of the requirements by displaying
