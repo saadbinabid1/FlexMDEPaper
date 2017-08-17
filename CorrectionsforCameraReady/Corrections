@@ -1,0 +1,81 @@
+----------------------- REVIEW 1 ---------------------
+
+* In the abstract, I think the summary of abstraction levels is misleading: the definition and combination of DSLs seem to happen on the same level, which is the meta-level rather than the meta-meta-level. Since the overview in the introduction is more accurate, the abstract should be aligned with it.
+
+Addressed it by putting new text:
+1) the meta-meta level, the Meta-Programming System (MPS) workbench with its language definition capibilities;
+
+
+* From the technical standpoint, an aspect that does not receive much attention in the paper is (i) how the DSLs are actually assembled, (ii) how the DSL assembling mechanism is reflected on the model-level, and (iii) what this entails for the users. In the literature, the combination of DSLs to enable a specific modeling process has been investigated in paper [A], in which model-level interfaces are derived from meta-model interfaces to support independent editing, analyzability etc. during model construction. I wonder if the shortcomings mentioned in the authors' conclusions could be addressed by these ideas.
+
+[A] Daniel Strüber, Gabriele Taentzer, Stefan Jurack, Tim Schäfer: Towards a Distributed Modeling Process Based on Composite Models. FASE 2013: 6-20
+
+Cannot address this because of the limited space.
+
+Language issues:
+"we propose precisely" -> remove "precisely", seems to be filler
+Removed text
+
+using out approach -> using our approach
+Fixed accordingly
+
+edition capabilities -> editing capabilities
+Fixed accordingly
+
+"The case study requirements gathering framework we introduce here" -> "The requirements-gathering framework in our case study"
+Fixed accordingly
+
+
+----------------------- REVIEW 2 ---------------------
+
+=== Minor issues ===
+
+- p.2: "using our" instead of "using out"
+Addressed accordingly
+
+- p.2: "the framework customizer [...] who develop" <- "who develops"
+Addressed accordingly
+
+- p.3: not use to whom "she" refers
+Addressed accordingly. New text starts like "This can also ``drive'' the user....."
+
+- p.4: Fig. 1 is hard to understand and to link to the description. The upper part of the upper layer is only discussed much further in the paper
+Cannot address this because of the limited space
+
+- p.4: "to build" instead of "to building"
+Addressed in the text accordingly.
+
+- p.5: "requirements of the software" instead of "requirements the software"?
+Addressed in the text accordingly.
+
+- p.5: "complete, correct and traceable" <- comma is needed before "and" for enumerated list
+Addressed in the text accordingly.
+
+- p.6: the authors mentioned that "the conditions described on the stated of figure 2 are boolean properties" but no example is shown
+Addressed by putting a text that is as follows,
+An example of the boolean properties is \emph{GlossaryTermDefinedProperty}. The boolean property \emph{GlossaryTermDefinedProperty} returns \emph{true} if a glossary term is defined and \emph{false} elsewise.
+
+- p.7: an example of the MPS intention "Extract Into Glossary" should be added
+Addressed by adding the following lines,
+For example, the requirements engineer selects the words ``Minimum increase value'' from the text part of the requirement and applies the
+intention ``Extract Into Glossary''. The requirements engineer can than see that the glossary contains the term ``Minimum increase value'' in the glossary.
+
+----------------------- REVIEW 3 ---------------------
+The the approach is defined is kind of heavyweight, as it requires
+adaptations at the metametalevel, which might invalidate existing models
+defined on the traditional MPS framework, is there a migration facility?
+Although it is outside the scope of the work, it would be interesting to
+have an in-depth discussion of the pros and cons over a lightweight
+approach, ie where the process is defined at the metamodel level only
+(similar to what Eugenia [1] does with the annotations for defining the
+diagrammatic syntax of a metamodel).
+
+[1] Kolovos, Dimitrios S., Louis M. Rose, Saad Bin Abid, Richard F.
+Paige, Fiona AC Polack, and Goetz Botterweck. "Taming EMF and GMF using
+model transformation." In International Conference on Model Driven
+Engineering Languages and Systems, pp. 211-225. Springer, Berlin,
+Heidelberg, 2010.
+
+Cannot address because of the limited space.
+But....
+We are not sure of what does the adaptation mean here. Change of technology will certainly mean re-developing and re-assembling the DSLs for our projects. But so does the frameworks like EMF and GMF. As explained in the introduction part of the paper that we used MPS as a base technology to define and assemble the DSLs. Also, in comparison to the annotation-based approach (i.e., the likes of Eugenia) our approach is an attempt to guide the requirements engineer in model construction by making it process-aware.  

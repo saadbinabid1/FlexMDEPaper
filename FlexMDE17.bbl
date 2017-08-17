@@ -1,0 +1,125 @@
+\begin{thebibliography}{10}
+
+\bibitem{coolingControllerProcess}
+{Cooling Controller Model Development Environment}.
+\newblock \url{https://github.com/levilucio/CoolingControllerReqsDash.git}.
+
+\bibitem{earsctrlProcess}
+{EARS-CTRL Model Development Environment}.
+\newblock \url{https://github.com/levilucio/EARS-CTRLDash.git}.
+
+\bibitem{mps}
+{Meta Programming System}.
+\newblock \url{https://www.jetbrains.com/mps/}.
+
+\bibitem{soley}
+{Soley Tool Suite}.
+\newblock \url{https://www.soley.io/}.
+
+\bibitem{coolingControllerProcessVideo}
+{Video for the Cooling Controller IDE}.
+\newblock \url{https://youtu.be/HcYH6AV1UEU}.
+
+\bibitem{earsctrlProcessVideo}
+{Video for the EARS-CTRL IDE}.
+\newblock \url{https://youtu.be/vzhUwjH8eLE}.
+
+\bibitem{Models17Sudeep}
+Vincent Aravantinos and Sudeep Kanav.
+\newblock Tool support for live formal verification.
+\newblock Submitted to the Practice and Innovation Track at MoDELS 2017.
+
+\bibitem{AF315}
+Vincent Aravantinos, Sebastian Voss, Sabine Teufl, Florian H{\"{o}}lzl, and
+  Bernhard Sch{\"{a}}tz.
+\newblock {AutoFOCUS 3: Tooling Concepts for Seamless, Model-based Development
+  of Embedded Systems}.
+\newblock In {\em Proceedings of {ACES-MB} (co-located with {MoDELS})}, pages
+  19--26, 2015.
+
+\bibitem{DBLP:conf/vamos/BayhaLAMI16}
+Andreas Bayha, Levi L{\'{u}}cio, Vincent Aravantinos, Kenji Miyamoto, and
+  Georgeta Igna.
+\newblock Factory product lines: Tackling the compatibility problem.
+\newblock In {\em Proc. of VaMoS 2016}.
+
+\bibitem{DBLP:conf/syscon/BonnetVEN16}
+St{\'{e}}phane Bonnet, Jean{-}Luc Voirin, Daniel Exertier, and V{\'{e}}ronique
+  Normand.
+\newblock Not (strictly) relying on sysml for {MBSE:} language, tooling and
+  development perspectives: The arcadia/capella rationale.
+\newblock In {\em Proceedings of SysCon 2016}, pages 18--21. {IEEE}, 2016.
+
+\bibitem{DBLP:conf/oopsla/EysholdtB10}
+Moritz Eysholdt and Heiko Behrens.
+\newblock Xtext: implement your language faster than the quick and dirty way.
+\newblock In William~R. Cook, Siobh{\'{a}}n Clarke, and Martin~C. Rinard,
+  editors, {\em Proceedings of {SPLASH/OOPSLA} 2010}, pages 307--309. {ACM},
+  2010.
+
+\bibitem{DBLP:conf/asplos/HauswaldLZLRKDM15}
+Johann Hauswald, Michael~A. Laurenzano, Yunqi Zhang, Cheng Li, Austin Rovinski,
+  Arjun Khurana, Ronald~G. Dreslinski, Trevor~N. Mudge, Vinicius Petrucci,
+  Lingjia Tang, and Jason Mars.
+\newblock Sirius: An open end-to-end voice and vision personal assistant and
+  its implications for future warehouse scale computers.
+\newblock In {\em Proceedings of {ASPLOS}'15}, pages 223--238, 2015.
+
+\bibitem{Kolovos2008}
+Dimitrios~S. Kolovos, Richard~F. Paige, and Fiona~A.C. Polack.
+\newblock {A framework for composing modular and interoperable model management
+  tasks}.
+\newblock In {\em MDTPI Workshop, EC-MDA}, 2008.
+
+\bibitem{DBLP:conf/sdl/LucioMDVJ13}
+Levi L{\'{u}}cio, Sadaf Mustafiz, Joachim Denil, Hans Vangheluwe, and Maris
+  Jukss.
+\newblock {FTG+PM:} an integrated framework for investigating model
+  transformation chains.
+\newblock In {\em Proceedings of {SDL} 2013}, pages 182--202, 2013.
+
+\bibitem{MustafizDLV12}
+Sadaf Mustafiz, Joachim Denil, Levi L{\'{u}}cio, and Hans Vangheluwe.
+\newblock The {FTG+PM} framework for multi-paradigm modelling: an automotive
+  case study.
+\newblock In {\em Proceedings of MPM@MoDELS 2012}, pages 13--18, 2012.
+
+\bibitem{DBLP:conf/pppj/PechSV13}
+Vaclav Pech, Alex Shatalin, and Markus Voelter.
+\newblock Jetbrains {MPS} as a tool for extending java.
+\newblock In Martin Pl{\"{u}}micke and Walter Binder, editors, {\em Proceedings
+  of PPPJ '13}, pages 165--168. {ACM}, 2013.
+
+\bibitem{DBLP:books/sp/spes2016}
+Klaus Pohl, Manfred Broy, Heinrich Daembkes, and Harald H{\"{o}}nninger,
+  editors.
+\newblock {\em Advanced Model-Based Engineering of Embedded Systems, Extensions
+  of the {SPES} 2020 Methodology}.
+\newblock Springer, 2016.
+
+\bibitem{MIRA13}
+S.~Teufl, D.~Mou, and D.~Ratiu.
+\newblock Mira: A tooling-framework to experiment with model-based requirements
+  engineering.
+\newblock In {\em Proceedings of RE'13}, pages 330--331, July 2013.
+
+\bibitem{DBLP:conf/sle/Tolvanen16}
+Juha{-}Pekka Tolvanen.
+\newblock {MetaEdit+} for collaborative language engineering and language use
+  (tool demo).
+\newblock In {\em Proceedings of SLE 2016}, pages 41--45, 2016.
+
+\bibitem{wagelaar2006blackbox}
+D.~Wagelaar.
+\newblock Blackbox composition of model transformations using domain-specific
+  modelling languages.
+\newblock In {\em Proceedings of CMT 2006}, 2006.
+
+\bibitem{DBLP:conf/models/WhittleHRBH13}
+Jon Whittle, John~Edward Hutchinson, Mark Rouncefield, H{\aa}kan Burden, and
+  Rogardt Heldal.
+\newblock Industrial adoption of model-driven engineering: Are the tools really
+  the problem?
+\newblock In {\em Proceedings of {MODELS} 2013}, pages 1--17, 2013.
+
+\end{thebibliography}

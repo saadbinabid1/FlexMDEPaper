@@ -1,0 +1,58 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: FlexMDE17.aux
+The style file: plain.bst
+Database file #1: bibliography.bib
+Repeated entry---line 382 of file bibliography.bib
+ : @inproceedings{AF315
+ :                     ,
+I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in mps
+Warning--to sort, need author or key in coolingControllerProcess
+Warning--to sort, need author or key in earsctrlProcess
+Warning--to sort, need author or key in coolingControllerProcessVideo
+Warning--to sort, need author or key in earsctrlProcessVideo
+Warning--to sort, need author or key in soley
+Warning--empty year in DBLP:conf/vamos/BayhaLAMI16
+You've used 21 entries,
+            2118 wiz_defined-function locations,
+            623 strings with 8733 characters,
+and the built_in function-call counts, 7527 in all, are:
+= -- 707
+> -- 359
+< -- 10
++ -- 143
+- -- 121
+* -- 463
+:= -- 1125
+add.period$ -- 60
+call.type$ -- 21
+change.case$ -- 120
+chr.to.int$ -- 0
+cite$ -- 28
+duplicate$ -- 321
+empty$ -- 652
+format.name$ -- 121
+if$ -- 1679
+int.to.chr$ -- 0
+int.to.str$ -- 21
+missing$ -- 14
+newline$ -- 102
+num.names$ -- 35
+pop$ -- 194
+preamble$ -- 1
+purify$ -- 100
+quote$ -- 0
+skip$ -- 259
+stack$ -- 0
+substring$ -- 373
+swap$ -- 111
+text.length$ -- 10
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 82
+warning$ -- 7
+while$ -- 60
+width$ -- 23
+write$ -- 205
+(There was 1 error message)

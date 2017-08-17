@@ -5,7 +5,7 @@ MPS}
 \subsection{A Generic Requirements Gathering Framework}
 \label{sec:generic_req_fram}
 \vspace{-.3cm}
-The case study requirements gathering framework we introduce here borrows its
+The requirements gathering framework we introduce here borrows its
 structure from the Model-based Integrated Requirement Specification and Analysis (MIRA)
 Framework~\cite{MIRA13,AF315}. The main parts of the MIRA framework are
 as follows:
@@ -46,7 +46,7 @@ and correspond to MIRA's verification activities.\vspace{-.8cm}
 
 In figure~\ref{fig:meta_struct_reqs} we present the first two meta-levels of our
 framework in the form of a stack of languages: at the bottom of the stack we
-have MPS itself, with its meta-edition capabilities; in the lower half of the
+have MPS itself, with its meta-editing capabilities; in the lower half of the
 layer immediately above we define the four aspects of the MIRA framework. Each one of the four
 aspects includes groups of DSLs that allow the requirements engineer to express
 parts of the complete requirements model. The \emph{framework customizer}, in
@@ -72,7 +72,7 @@ the following languages:
 %   example} to describe how systems are descomposed in components and how those
 %   components behave and interact with each other.
   \item \emph{Trace Links}: this group contains a generic \emph{trace
-  language} that can be extended to building trace links from any to any model
+  language} that can be extended to build trace links from any to any model
   element in MPS.
   \item \emph{QA collection}: the QA collection group includes the
   \textsf{Process} and the \textsf{Dashboard} languages. The \textsf{Process}
@@ -140,11 +140,11 @@ The case study we present here is inspired by a requirements document (that for
 non-disclosure reasons we cannot cite here) which was made available to us by
 Diehl aerospace, one of our industrial partners. Diehl builds hardware for
 airplanes and, as such, cooling systems for that hardware also need to be
-produced. The process of gathering requirements the software that controls such
-cooling systems is currently almost completely manually done. This poses a
+produced. The process of gathering requirements of the software that controls
+such cooling systems is currently almost completely manually done. This poses a
 problem to Diehl, as the current requirements gathering process imposes a large
 amount of effort to ensure that those requirements are documented in a fashion
-that is complete, correct and traceable. Additionally, the aerospace industry
+that is complete, correct, and traceable. Additionally, the aerospace industry
 has to adhere to strict regulations such that their systems can be certified to
 be used in production.
 % Software reviewers require precise documentation for
@@ -175,10 +175,11 @@ controller requirements. The top part of each state in the figure includes the d
 of the conditions that need to be satisfied such that the hint associated to
 that state is displayed on the dashboard. The conditions described on the states
 of figure~\ref{fig:empty_dashboard} are boolean properties that are checked on
-the current state of a requirements project. These properties are implemented in
-the \textsf{ModelProperty} Language in figure~\ref{fig:meta_struct_reqs}. This
-language holds the algorithms that implements the analyses required for our
-specific requirements gathering system.
+the current state of a requirements project. An example of the boolean
+properties is \emph{GlossaryTermDefinedProperty}. The boolean property
+\emph{GlossaryTermDefinedProperty} returns \emph{true} if a glossary term is
+defined and \emph{false} elsewise. The boolean properties are implemented in the
+\textsf{ModelProperty} Language in figure~\ref{fig:meta_struct_reqs}. This language holds the algorithms that implements the analyses required for our specific requirements gathering system.
 Note that, although this customization work has been done at fortiss, the idea
 is that in the future this work would be performed by a \emph{domain specific
 tool developer} at Diehl. In a similar fashion, frameworks for gathering
