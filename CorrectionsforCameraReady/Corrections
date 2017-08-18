@@ -57,8 +57,8 @@ An example of the boolean properties is \emph{GlossaryTermDefinedProperty}. The 
 
 - p.7: an example of the MPS intention "Extract Into Glossary" should be added
 Addressed by adding the following lines,
-For example, the requirements engineer selects the words ``Minimum increase value'' from the text part of the requirement and applies the
-intention ``Extract Into Glossary''. The requirements engineer can than see that the glossary contains the term ``Minimum increase value'' in the glossary.
+From this requirement the requirements engineer can then extract minimum (e.g., “Minimum increase value’) and maximum
+threshold values using the MPS intention “Extract Into Glossary”.
 
 ----------------------- REVIEW 3 ---------------------
 The the approach is defined is kind of heavyweight, as it requires
