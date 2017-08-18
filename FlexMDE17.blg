@@ -14,45 +14,45 @@ Warning--to sort, need author or key in coolingControllerProcessVideo
 Warning--to sort, need author or key in earsctrlProcessVideo
 Warning--to sort, need author or key in soley
 Warning--empty year in DBLP:conf/vamos/BayhaLAMI16
-You've used 21 entries,
+You've used 20 entries,
             2118 wiz_defined-function locations,
-            623 strings with 8733 characters,
-and the built_in function-call counts, 7527 in all, are:
-= -- 707
-> -- 359
-< -- 10
-+ -- 143
-- -- 121
-* -- 463
-:= -- 1125
-add.period$ -- 60
-call.type$ -- 21
-change.case$ -- 120
+            612 strings with 8232 characters,
+and the built_in function-call counts, 7007 in all, are:
+= -- 654
+> -- 335
+< -- 9
++ -- 135
+- -- 114
+* -- 430
+:= -- 1048
+add.period$ -- 56
+call.type$ -- 20
+change.case$ -- 115
 chr.to.int$ -- 0
-cite$ -- 28
-duplicate$ -- 321
-empty$ -- 652
-format.name$ -- 121
-if$ -- 1679
+cite$ -- 27
+duplicate$ -- 298
+empty$ -- 610
+format.name$ -- 114
+if$ -- 1559
 int.to.chr$ -- 0
-int.to.str$ -- 21
-missing$ -- 14
-newline$ -- 102
-num.names$ -- 35
-pop$ -- 194
+int.to.str$ -- 20
+missing$ -- 13
+newline$ -- 97
+num.names$ -- 31
+pop$ -- 187
 preamble$ -- 1
-purify$ -- 100
+purify$ -- 96
 quote$ -- 0
-skip$ -- 259
+skip$ -- 239
 stack$ -- 0
-substring$ -- 373
-swap$ -- 111
-text.length$ -- 10
+substring$ -- 336
+swap$ -- 100
+text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 82
+type$ -- 78
 warning$ -- 7
-while$ -- 60
-width$ -- 23
-write$ -- 205
+while$ -- 54
+width$ -- 22
+write$ -- 193
 (There was 1 error message)

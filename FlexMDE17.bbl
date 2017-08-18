@@ -50,13 +50,6 @@ St{\'{e}}phane Bonnet, Jean{-}Luc Voirin, Daniel Exertier, and V{\'{e}}ronique
   development perspectives: The arcadia/capella rationale.
 \newblock In {\em Proceedings of SysCon 2016}, pages 18--21. {IEEE}, 2016.
 
-\bibitem{DBLP:conf/oopsla/EysholdtB10}
-Moritz Eysholdt and Heiko Behrens.
-\newblock Xtext: implement your language faster than the quick and dirty way.
-\newblock In William~R. Cook, Siobh{\'{a}}n Clarke, and Martin~C. Rinard,
-  editors, {\em Proceedings of {SPLASH/OOPSLA} 2010}, pages 307--309. {ACM},
-  2010.
-
 \bibitem{DBLP:conf/asplos/HauswaldLZLRKDM15}
 Johann Hauswald, Michael~A. Laurenzano, Yunqi Zhang, Cheng Li, Austin Rovinski,
   Arjun Khurana, Ronald~G. Dreslinski, Trevor~N. Mudge, Vinicius Petrucci,
