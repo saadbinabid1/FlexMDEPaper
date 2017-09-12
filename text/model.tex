@@ -60,18 +60,16 @@ a tabular view of the refinement process.
 \vspace{-.7cm}
 \caption{The Dashboard provides a hint for adding a new requirement}
 \label{fig:dashboard_newreq}
-\vspace{-.4cm}
+\vspace{-.7cm}
 \end{figure*}
 
 The overall desired behavior of the cooling controller is stated as is an instance of the
 \textsf{Requirements} language in figure~\ref{fig:new_req}. From this
-requirement the requirements engineer can then extract minimum and maximum
-threshold values using the MPS intention ``Extract Into Glossary''. When used, this MPS intention generates in the
-project's glossary an entry with the same names as words or sets of words
-selected from the text. This constitutes the first refinement of the original
-abstract requirement. The next step is to define the duty cycle of the fan as a
-function of the current temperature of the controller board and whether the temperature is going
-up or down. The dashboard assists the requirements engineer in this task by
+requirement the requirements engineer can then extract minimum (e.g., ``Minimum
+increase value') and maximum (e.g., ``maximum increase value') threshold values
+using the MPS intention ``Extract Into Glossary''. When used, this MPS intention generates in the project's glossary an entry with the same names as words or sets of words
+selected from the text. This constitutes the first
+refinement of the original abstract requirement. The next step is to define the duty cycle of the fan as a function of the current temperature of the controller board and whether the temperature is going up or down. The dashboard assists the requirements engineer in this task by
 providing a hint that, when mouse-clicked, automatically generates a table to
 define such behavior. An example of such a table is depicted in
 figure~\ref{fig:FAU_behavior_2d}.
@@ -119,7 +117,7 @@ figure~\ref{fig:FAU_behavior_2d}.
 % \end{figure*}
 \begin{figure*}[!h]
 \centering
-\includegraphics[width=.7\textwidth]{./figures/DiehlTableAnd2DGraph.png}
+\includegraphics[width=.6\textwidth]{./figures/DiehlTableAnd2DGraph.png}
 \vspace{-.3cm}
 \caption{A filled in table and associated 2D visualization of the defined
 function} 

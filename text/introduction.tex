@@ -13,7 +13,6 @@ around''.
 
 Many technologies now precisely enable this sort of tailoring, among which 
 JetBrains' MPS~\cite{DBLP:conf/pppj/PechSV13},
-Xtext~\cite{DBLP:conf/oopsla/EysholdtB10},
 Sirius~\cite{DBLP:conf/asplos/HauswaldLZLRKDM15}, or the classic MetaEdit+~\cite{DBLP:conf/sle/Tolvanen16}.
 With the maturity of these technologies, one can safely say that building your own MDE tool
 has never been so easy -- technology enthusiasts in various industries now
@@ -47,9 +46,9 @@ avionic systems engineering and to the processes of Thales.
 All the above points to the fact that, if the tools can be tailored, the process
 itself should be tailorable.
 
-In this paper, we propose precisely an approach to develop DS(M)Ls in JetBrains'
+In this paper, we propose an approach to develop DS(M)Ls in JetBrains'
 MPS~\cite{DBLP:conf/pppj/PechSV13}, \emph{equipped with a means to customize the tool in order to support a
-given process:} using out approach, in addition to the usual MPS mechanisms to
+given process:} using our approach, in addition to the usual MPS mechanisms to
 develop their DSLs, developers can also explicitly express their own process.
 Such a process of model construction is declared as a
 statechart-like diagram, being that the current state is defined by the
@@ -73,8 +72,8 @@ usage of the framework:
 \begin{itemize}
   \item the \emph{framework developer} (in our case JetBrains), who develops MPS
   (level M3),
-  \item the \emph{framework customizer} (the authors of this paper), who develop
-  a library for process-customizable DSLs (level M2),
+  \item the \emph{framework customizer} (the authors of this paper), who
+  develops a library for process-customizable DSLs (level M2),
   \item the \emph{(domain-specific) tool developer} 
     (typically a consultant or the in-house technology department of a company)
     who actually develops the domain-specific tool, making use of our libraries (level M2),
@@ -95,7 +94,7 @@ focusing on quality assurance for requirements.
 
 A \emph{tool developer} can use this set of DSLs as a basis for their
 model-based development environment, by composing them with more specific DSLs
-of their own design. She can also ``drive'' the user in her requirements
+of their own design. This can also ``drive'' the user in her requirements
 formalization process by implementing a process using our \textsf{Process} language.
 We illustrate this approach by developing a requirements-engineering tool
 specialized in the development of hardware cooling systems, inspired from a case
